@@ -1,0 +1,76 @@
+#------------------------------------------------------------
+#        Script MySQL.
+#------------------------------------------------------------
+
+
+#------------------------------------------------------------
+# Table: Place
+#------------------------------------------------------------
+
+CREATE TABLE Place(
+        id_place Int  Auto_increment  NOT NULL ,
+        libre    Bool
+	,CONSTRAINT Place_PK PRIMARY KEY (id_place)
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: Utlisateur
+#------------------------------------------------------------
+
+CREATE TABLE Utlisateur(
+        id_utilisateur      Int  Auto_increment  NOT NULL ,
+        nom_utilisateur     Varchar (25) ,
+        prenom_utilisateur  Varchar (25) ,
+        email               Varchar (25) ,
+        adresse_utilisateur Varchar (25) ,
+        CP_utilisateur      Varchar (25) ,
+        ville               Varchar (25) ,
+        mdp                 Varchar (25) ,
+        admis               Bool ,
+        droit               Varchar (50) NOT NULL
+	,CONSTRAINT Utlisateur_PK PRIMARY KEY (id_utilisateur)
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: Demande 
+#------------------------------------------------------------
+
+CREATE TABLE Demande(
+        id_demande     Int  Auto_increment  NOT NULL ,
+        date_demande   Bool ,
+        rang           Varchar (50) NOT NULL ,
+        id_utilisateur Int NOT NULL
+	,CONSTRAINT Demande_PK PRIMARY KEY (id_demande)
+
+	,CONSTRAINT Demande_Utlisateur_FK FOREIGN KEY (id_utilisateur) REFERENCES Utlisateur(id_utilisateur)
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: date
+#------------------------------------------------------------
+
+CREATE TABLE date(
+        date Date NOT NULL
+	,CONSTRAINT date_PK PRIMARY KEY (date)
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: attribuer
+#------------------------------------------------------------
+
+CREATE TABLE attribuer(
+        id_place       Int NOT NULL ,
+        date           Date NOT NULL ,
+        id_utilisateur Int NOT NULL ,
+        duree          Int NOT NULL
+	,CONSTRAINT attribuer_PK PRIMARY KEY (id_place,date,id_utilisateur)
+
+	,CONSTRAINT attribuer_Place_FK FOREIGN KEY (id_place) REFERENCES Place(id_place)
+	,CONSTRAINT attribuer_date0_FK FOREIGN KEY (date) REFERENCES date(date)
+	,CONSTRAINT attribuer_Utlisateur1_FK FOREIGN KEY (id_utilisateur) REFERENCES Utlisateur(id_utilisateur)
+)ENGINE=InnoDB;
+
