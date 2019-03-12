@@ -11,6 +11,8 @@
 |
 */
 
+Route::resource('place', 'PlaceController');
+
 Route::get('/', function () {
     return view('welcome');
 });
