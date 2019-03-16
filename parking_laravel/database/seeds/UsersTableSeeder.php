@@ -20,6 +20,7 @@ class UsersTableSeeder extends Seeder
                  'password' => Hash::make('alexandre12'),
                  'created_at' => '2019-01-01 00:00:00',
                  'updated_at' => '2019-01-01 00:00:01',
+                 'admin' => TRUE,
              )
          );
      }

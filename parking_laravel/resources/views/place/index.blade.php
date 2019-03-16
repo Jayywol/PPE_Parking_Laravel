@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-  @if (...)
-      {{...}}
-  @endif
+Place available
+  @foreach (... as ...)
+     <p> {{ réservation }} </p>
+  @endforeach
 @stop
