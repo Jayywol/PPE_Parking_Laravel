@@ -13,10 +13,23 @@
 
 Route::resource('place', 'PlaceController');
 
+/*
+Affiche la vue welcome
+*/
 Route::get('/', function () {
     return view('welcome');
 });
 
+/*
+Route pour l'authentification
+Généré par make:authentification
+*/
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+/*
+Réservation avec l'id de l'user en paramètre
+*/
+Route::get('/user/{user}/booking/add', 'BookingController@add')
+      ->name('booking.add');

@@ -8,7 +8,8 @@ class Place extends Model
 {
     protected $fillable = ['available'];
 
-    public fonction scopeAvailable($query){
-      return $query->where('available', true);
+    public function booking()
+    {
+      return $this->hasMany('\App\Booking');
     }
 }

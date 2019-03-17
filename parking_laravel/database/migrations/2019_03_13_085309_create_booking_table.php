@@ -16,7 +16,7 @@ class CreateBookingTable extends Migration
         Schema::create('booking', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            $table->integer('duration');
+            $table->integer('duration')->default(7);
             $table->integer('users_id')->unsigned();
             $table->foreign('users_id')->references('id')->on('users')->onDelete('cascade');
             $table->integer('place_id')->unsigned();
