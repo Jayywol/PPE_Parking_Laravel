@@ -144,6 +144,28 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+      'email'                 => 'email',
+      'first_name'            => 'first name',
+      'last_name'             => 'last name',
+      'password'              => 'password',
+      'password_confirmation' => 'password confirmation',
+      'city'                  => 'city',
+      'address'               => 'adress',
+      'phone'                 => 'phone',
+      'mobile'                => 'mobile',
+      'age'                   => 'age',
+      'sex'                   => 'sex',
+      'gender'                => 'gender',
+      'day'                   => 'day',
+      'month'                 => 'month',
+      'year'                  => 'year',
+      'hour'                  => 'hour',
+      'minute'                => 'minute',
+      'second'                => 'second',
+      'date'                  => 'date',
+      'time'                  => 'time',
+      'available'             => 'available',
+    ],
 
 ];
