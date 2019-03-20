@@ -4,9 +4,11 @@
 <div class="content">
   <div class="title m-b-md">
   </br>
-  Parking
+  M2L
   </br>
-  Please log in
+  Réservation de parking
+  </br>
+  Veuillez vous connecter
   </div>
 </div>
 @stop
