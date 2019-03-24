@@ -8,13 +8,42 @@ class Booking extends Model
 {
     protected $fillable = ['duration'];
 
+    /*
+     * Relations
+     */
     public function user()
         {
           return $this->belongsTo('\App\User');
         }
 
-        public function place()
+    public function place()
         {
-            return $this->belongsTo('\App\Place');
+          return $this->belongsTo('\App\Place');
         }
+
+    /*
+     * Fonction
+     */
+
+    /*
+     * Retourne la date de fin grâce à la durée et la date de création.
+     */
+    public function addDay()
+    {
+        return toDate(toDate($this->created_at)." +".$this->duration." days");
+    }
+
+    /*
+     * Retourne le nombre de jours restant entre la date actuel et la date de fin
+     */
+    public function remainingDays()
+    {
+        return (strtotime($this->addDay()) - strtotime(date("Y-m-d"))) / 86400;
+    }
+
+    public function checkExpired()
+    {
+        return $this->remainingDays() <= 0;
+    }
+
 }
