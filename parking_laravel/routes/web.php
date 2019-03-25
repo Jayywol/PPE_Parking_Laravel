@@ -29,4 +29,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 /*
  * Réservation avec l'id de l'user en paramètre
  */
-Route::get('/user/{user}/booking/create', 'BookingController@create')->name('booking.create');
+Route::get('/user/booking/create', 'BookingController@create')->name('booking.create');
