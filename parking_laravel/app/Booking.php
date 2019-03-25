@@ -30,7 +30,7 @@ class Booking extends Model
      */
     public function addDay()
     {
-        return convertDate(convertDate($this->created_at)." +".$this->duration." days");
+        return toDate(toDate($this->created_at)." +".$this->duration." days");
     }
 
     /*
