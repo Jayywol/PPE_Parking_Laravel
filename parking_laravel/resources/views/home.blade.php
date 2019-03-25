@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header">Réservations</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -13,16 +13,12 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    You are logged in !
                     <!-- Place Name -->
                     <div class="form-group">
-                      <label for="task" class="col-sm-3 control-label">Place</label>
-
                     <!-- Add Booking Button -->
                       <a href="{{route('booking.create', Auth::user())}}">
                         <button type="submit" class="btn btn-default">
-                          <i class="fa fa-plus"></i> Booking
+                          <i class="fa fa-plus">Réserver</i>
                         </button>
                       </a>
                   </br>
