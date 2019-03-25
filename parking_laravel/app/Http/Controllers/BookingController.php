@@ -11,9 +11,9 @@ use Auth;
 
 class BookingController extends Controller
 {
-    public function create(Request $id)
+    public function create()
     {
-      $user = User::find($id)->first();
+      $user = Auth::user();
       $place = Place::where('available', TRUE)->first();
 
       Booking::create(['users_id' => $user->id, 'place_id' => $place->id]);

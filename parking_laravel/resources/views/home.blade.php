@@ -16,7 +16,7 @@
                     <!-- Place Name -->
                     <div class="form-group">
                     <!-- Add Booking Button -->
-                      <a href="{{route('booking.create', Auth::user())}}">
+                      <a href="{{route('booking.create')}}">
                         <button type="submit" class="btn btn-default">
                           <i class="fa fa-plus">Réserver</i>
                         </button>
