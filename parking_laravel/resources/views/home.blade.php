@@ -20,7 +20,7 @@
                       <label for="task" class="col-sm-3 control-label">Place</label>
 
                     <!-- Add Booking Button -->
-                      <a href="{{route('booking.add', Auth::user())}}">
+                      <a href="{{route('booking.create', Auth::user())}}">
                         <button type="submit" class="btn btn-default">
                           <i class="fa fa-plus"></i> Booking
                         </button>

@@ -41,6 +41,9 @@ class Booking extends Model
         return (strtotime($this->addDay()) - strtotime(date("Y-m-d"))) / 86400;
     }
 
+    /*
+     * Vérifie si la date est inférieur à la date atuel.
+    */
     public function checkExpired()
     {
         return $this->remainingDays() <= 0;
