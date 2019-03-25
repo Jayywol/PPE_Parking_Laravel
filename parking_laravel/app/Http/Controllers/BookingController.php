@@ -11,15 +11,15 @@ use Auth;
 
 class BookingController extends Controller
 {
-    public function create()
+    public function create(Request $id)
     {
-      $user = Auth::user();
+      $user = User::find($id)->first();
       $place = Place::where('available', TRUE)->first();
 
       Booking::create(['users_id' => $user->id, 'place_id' => $place->id]);
       $place->available = FALSE;
       $place->save();
-      //flash('Vous avez réservé la place '.$place->id)->success()->important();
+      flash('Vous avez réservé la place '.$place->id)->success()->important();
 
       return redirect()->back();
     }

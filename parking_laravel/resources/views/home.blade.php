@@ -16,13 +16,21 @@
                     <!-- Place Name -->
                     <div class="form-group">
                     <!-- Add Booking Button -->
-                      <a href="{{route('booking.create')}}">
+                      <a href="{{route('booking.create', Auth::user())}}">
                         <button type="submit" class="btn btn-default">
                           <i class="fa fa-plus">Réserver</i>
                         </button>
                       </a>
                   </br>
-                    <!-- {{ Auth::user()->booking }} -->
+                    <!-- @ if
+                      You can book a place
+                      <div class ="card">
+                        <button type="button" class="btn btn-primary active">Book a place</button>
+                      </div>
+                      @ else
+                        You can't book a place
+                        <button type="button" class="btn btn-primary disabled">Disabled Primary</button>
+                    @ endif-->
                     </div>
                 </div>
             </div>
