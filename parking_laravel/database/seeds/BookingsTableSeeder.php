@@ -16,15 +16,15 @@ class BookingsTableSeeder extends Seeder
             array(
                 'created_at' => '2019-01-01 00:00:00',
                 'updated_at' => '2019-01-01 00:00:01',
-                'date_end' => '2019-01-06',
-                'users_id' => 1,
+                'date_end' => '2019-01-06 23:59:00',
+                'user_id' => 1,
                 'place_id' => 1,
             ),
             array(
                 'created_at' => '2019-02-01 00:00:00',
                 'updated_at' => '2019-02-01 00:00:01',
-                'date_end' => '2019-02-06',
-                'users_id' => 2,
+                'date_end' => '2019-02-06 23:59:00',
+                'user_id' => 2,
                 'place_id' => 2,
             )
         ));

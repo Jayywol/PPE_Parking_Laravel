@@ -15,7 +15,7 @@ class UsersTableSeeder extends Seeder
            array(
              array(
                  'id' => 1,
-                 'firstname' => 'Alexandre',
+                 'firstName' => 'Alexandre',
                  'lastName' => 'Mesle',
                  'email' => 'alex@test.com',
                  'password' => Hash::make('alexandre12'),
@@ -26,7 +26,7 @@ class UsersTableSeeder extends Seeder
              ),
              array(
                  'id' => 2,
-                 'firstname' => 'Alexandre',
+                 'firstName' => 'Alexandre',
                  'lastName' => 'Ma',
                  'email' => 'jayywol23@gmail.com',
                  'password' => Hash::make('alexandre12'),
