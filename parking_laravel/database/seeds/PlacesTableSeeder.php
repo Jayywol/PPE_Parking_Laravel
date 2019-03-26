@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class PlaceTableSeeder extends Seeder
+class PlacesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,7 +11,7 @@ class PlaceTableSeeder extends Seeder
      */
     public function run()
     {
-      DB::table('place')->insert(
+      DB::table('places')->insert(
           array(
               array(
                   'id' => 1,
