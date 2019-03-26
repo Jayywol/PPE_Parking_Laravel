@@ -31,4 +31,4 @@ Route::get('/home', 'HomeController@index')->name('home');
  */
 Route::get('/user/booking/create', 'BookingController@create')->name('booking.create');
 
-Route::get('/liste', 'UserController@show')->name('liste.all');
+Route::get('/liste', 'BookingController@listBook')->name('liste.all');

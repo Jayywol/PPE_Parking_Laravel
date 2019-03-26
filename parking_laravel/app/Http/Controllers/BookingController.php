@@ -23,4 +23,10 @@ class BookingController extends Controller
 
       return redirect()->back();
     }
+
+    public function listBook()
+    {
+      $book = Booking::all();
+      return view('place.liste', ['bookings'=> $book]);
+    }
 }
