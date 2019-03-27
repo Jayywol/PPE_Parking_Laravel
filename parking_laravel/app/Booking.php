@@ -25,6 +25,10 @@ class Booking extends Model
      * Fonction
      */
 
+     public function getUser () {
+       return $this->user()->first();
+     }
+
     /*
      * Retourne la date de fin grâce à la durée et la date de création.
      */

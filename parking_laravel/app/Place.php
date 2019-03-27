@@ -8,7 +8,7 @@ class Place extends Model
 {
     protected $fillable = ['available'];
 
-    public function booking()
+    public function bookings()
     {
       return $this->hasMany('\App\Booking');
     }

@@ -18,7 +18,7 @@
                     <!-- Add Booking Button -->
                       <a href="{{route('booking.create')}}">
                         <button type="submit" class="btn btn-default">
-                          <i class="fa fa-plus">Réserver</i>
+                          <i class="fa fa-plus">Réserver une place</i>
                         </button>
                       </a>
                   </br>
