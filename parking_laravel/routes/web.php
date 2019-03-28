@@ -27,11 +27,8 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 /*
- * Réservation avec l'id de l'user en paramètre //TODO
+ * Réservation avec l'id de l'user en paramètre
  */
 Route::get('/user/booking/create', 'BookingController@create')->name('booking.create');
 
-/*
- * Affiche la liste des réservations
- */
 Route::get('/liste', 'BookingController@listBook')->name('liste.all');

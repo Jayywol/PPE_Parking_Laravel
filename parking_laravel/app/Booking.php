@@ -22,7 +22,7 @@ class Booking extends Model
         }
 
     /*
-     * Fonction retournant l'utilisateur de la réservation
+     * Fonction
      */
 
      public function getUser () {
