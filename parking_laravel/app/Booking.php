@@ -25,6 +25,9 @@ class Booking extends Model
      * Fonction
      */
 
+    /*
+     * Retourne l'utilisateur de la recherche
+     */
      public function getUser () {
        return $this->user()->first();
      }
