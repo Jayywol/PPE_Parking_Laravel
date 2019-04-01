@@ -108,7 +108,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('home') }}">{{ __('Réservation') }}</a>
+                            <a class="nav-link" href="{{ route('home') }}">{{ __('Demande de réservation') }}</a>
                         </li>
 
                             <li class="nav-item dropdown">

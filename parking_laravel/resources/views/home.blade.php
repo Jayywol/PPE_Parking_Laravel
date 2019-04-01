@@ -21,16 +21,7 @@
                           <i class="fa fa-plus">Réserver une place</i>
                         </button>
                       </a>
-                  </br>
-                    <!-- @ if
-                      You can book a place
-                      <div class ="card">
-                        <button type="button" class="btn btn-primary active">Book a place</button>
-                      </div>
-                      @ else
-                        You can't book a place
-                        <button type="button" class="btn btn-primary disabled">Disabled Primary</button>
-                    @ endif-->
+                    </br>
                     </div>
                 </div>
             </div>
