@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Booking extends Model
 {
-    protected $fillable = ['duration'];
+    protected $fillable = ['date_end'];
 
     /*
      * Relations
@@ -20,7 +20,6 @@ class Booking extends Model
         {
           return $this->belongsTo('\App\Place');
         }
-
     /*
      * Fonction
      */
