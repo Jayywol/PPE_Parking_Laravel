@@ -13,9 +13,8 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <!-- Place Name -->
                     <div class="form-group">
-                    <!-- Add Booking Button -->
+                    <!-- Ajout d'un bouton appelant la fonction create du model booking -->
                       <a href="{{route('booking.create')}}">
                         <button type="submit" class="btn btn-default">
                           <i class="fa fa-plus">Réserver une place</i>
