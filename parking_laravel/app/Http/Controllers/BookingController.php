@@ -16,7 +16,7 @@ class BookingController extends Controller
       $user = Auth::user();
       $place = Place::where('available', TRUE)->first();
 
-      Booking::create(['user_id' => $user->id, 'place_id' => $place->id, 'date_end' => NULL]);
+      $user->bookings()->create(['place_id'=>$place->id, 'date_end'=>NULL]);
       $place->available = FALSE;
       $place->save();
       flash('Vous avez réservé la place '.$place->id)->success()->important();
