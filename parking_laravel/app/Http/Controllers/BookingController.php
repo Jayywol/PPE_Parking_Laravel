@@ -18,12 +18,19 @@ class BookingController extends Controller
       $place = Place::where('available', TRUE)->first();
       $datefin=Carbon::now()->addDay(7);
 
-      $user->bookings()->create(['place_id'=>$place->id, 'date_end'=>$datefin]);
-      $place->available = FALSE;
-      $place->save();
-      flash('Vous avez réservé la place '.$place->id)->success()->important();
+      if (!empty($place))
+      {
+        $user->bookings()->create(['place_id'=>$place->id, 'date_end'=>$datefin]);
+        $place->available = FALSE;
+        $place->save();
+        flash('Vous avez réservé la place '.$place->id)->success()->important();
+        return redirect()->back();
+      }
+      else {
+        flash('Erreur : vous ne pouvez pas réserver de place car aucune place n\'est disponible')->error();
+        return redirect()->back();
+      }
 
-      return redirect()->back();
     }
 
     public function listBook()
