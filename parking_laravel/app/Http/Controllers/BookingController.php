@@ -30,12 +30,11 @@ class BookingController extends Controller
         flash('Erreur : vous ne pouvez pas réserver de place car aucune place n\'est disponible')->error();
         return redirect()->back();
       }
-
     }
 
     public function listBook()
     {
       $book = Booking::all();
-      return view('place.liste', ['bookings'=> $book]);
+      return view('book.list', ['bookings'=> $book]);
     }
 }
