@@ -17,7 +17,6 @@
           <th scope="col">Nom de l'utilisateur</th>
           <th scope="col">Email de l'utilisateur</th>
           <th scope="col">ID de l'utilisateur : </th>
-          <th scope="col">Supprimer la réservation</th>
         </tr>
       </thead>
     </br>
@@ -31,11 +30,6 @@
               <td>{{$booking->getUser()->lastName}}</td>
               <td>{{$booking->getUser()->email}}</td>
               <td>{{$booking->user_id}}</td>
-              <td>
-                <a href="{{route('booking.delete', $booking->place_id)}}">
-                  <button type="button" class="btn btn-outline-danger">x</button>
-                </form>
-              </td>
             </tr>
           <?php endforeach; ?>
       </tbody>

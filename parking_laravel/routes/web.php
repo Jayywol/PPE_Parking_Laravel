@@ -32,11 +32,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/booking/create', 'BookingController@create')->name('booking.create');
 
 /*
- * Supprime la réservation correspondante
- */
-Route::get('/booking/delete', 'BookingController@delete')->name('booking.delete');
-
-/*
  * Affiche la liste des réservations
  */
 Route::get('/bookinglist', 'BookingController@listBook')->name('bookingList.all');

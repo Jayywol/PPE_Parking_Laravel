@@ -14,6 +14,9 @@
                         </div>
                     @endif
                     <div class="form-group">
+                    <td>Afin d'effectuer une réservation, veuillez vérifier si une place est disponbible.</td>
+                    </br>
+                    </br>
                     <!-- Ajout d'un bouton appelant la fonction create du model booking -->
                       <a href="{{route('booking.create')}}">
                         <button type="submit" class="btn btn-default">
