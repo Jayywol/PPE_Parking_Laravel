@@ -102,9 +102,12 @@
                             @endif
                         @else
 
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('placeList.all') }}">{{ __('Liste des places') }}</a>
+                        </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('liste.all') }}">{{ __('Liste des réservations') }}</a>
+                            <a class="nav-link" href="{{ route('bookingList.all') }}">{{ __('Liste des réservations') }}</a>
                         </li>
 
                         <li class="nav-item">

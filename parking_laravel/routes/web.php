@@ -34,4 +34,9 @@ Route::get('/user/booking/create', 'BookingController@create')->name('booking.cr
 /*
  * Affiche la liste des réservations
  */
-Route::get('/liste', 'BookingController@listBook')->name('liste.all');
+Route::get('/bookinglist', 'BookingController@listBook')->name('bookingList.all');
+
+/*
+ * Affiche la liste des places
+ */
+Route::get('/placelist', 'PlaceController@listPlace')->name('placeList.all');

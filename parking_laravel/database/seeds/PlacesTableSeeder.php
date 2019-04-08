@@ -15,7 +15,7 @@ class PlacesTableSeeder extends Seeder
           array(
               array(
                   'id' => 1,
-                  'available' => TRUE,
+                  'available' => FALSE,
                   'created_at' => '2019-01-01 00:00:00',
                   'updated_at' => '2019-01-01 00:00:01',
               ),
