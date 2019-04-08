@@ -32,6 +32,13 @@ class BookingController extends Controller
       }
     }
 
+    public function delete()
+    {
+      $user = Auth::user();
+      flash('Erreur')->error();
+      return redirect()->back();
+    }
+
     public function listBook()
     {
       $book = Booking::all();

@@ -27,7 +27,11 @@ class Booking extends Model
     /*
      * Retourne l'utilisateur de la recherche
      */
-     public function getUser () {
+     public function getUser() {
+       return $this->user()->first();
+     }
+
+     public function scopegetUserID() {
        return $this->user()->first();
      }
 

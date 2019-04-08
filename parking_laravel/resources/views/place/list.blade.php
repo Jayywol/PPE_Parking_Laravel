@@ -7,11 +7,11 @@
 
 <div class = class="col-md-6">
   <div style="text-align: center">
-    <table class="table table-dark">
+    <table class="table table-striped">
       <thead>
         <tr>
-          <td>Numéro de la place : </td>
-          <td>Disponibilité (0 indisponible - 1 disponible)</td>
+          <th scope="col">Numéro de la place : </th>
+          <th scope="col">Disponibilité (0 indisponible - 1 disponible)</th>
         </tr>
       </thead>
     </br>

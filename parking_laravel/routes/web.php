@@ -29,12 +29,23 @@ Route::get('/home', 'HomeController@index')->name('home');
 /*
  * Création d'une réservation en redirigeant au controller
  */
-Route::get('/user/booking/create', 'BookingController@create')->name('booking.create');
+Route::get('/booking/create', 'BookingController@create')->name('booking.create');
+
+/*
+ * Supprime la réservation correspondante
+ */
+Route::get('/booking/delete', 'BookingController@delete')->name('booking.delete');
 
 /*
  * Affiche la liste des réservations
  */
 Route::get('/bookinglist', 'BookingController@listBook')->name('bookingList.all');
+
+/*
+ * Affiche la liste des réservations
+ */
+Route::get('/bookinglist', 'BookingController@listBook')->name('bookingList.all');
+
 
 /*
  * Affiche la liste des places
