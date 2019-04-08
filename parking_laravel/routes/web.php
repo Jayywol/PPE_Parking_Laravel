@@ -24,25 +24,29 @@ Route::get('/', 'IndexController@index')->name('login');
  */
 Auth::routes();
 
+/*
+ * Redirige l'utilisateur à la page d'accueil
+ */
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/booking', 'HomeController@bookingRequest')->name('booking');
 
 /*
  * Création d'une réservation en redirigeant au controller
  */
 Route::get('/booking/create', 'BookingController@create')->name('booking.create');
 
-/*
- * Affiche la liste des réservations
- */
-Route::get('/bookinglist', 'BookingController@listBook')->name('bookingList.all');
+Route::group([
+   'middleware' => ['Admin']
+], function () {
 
 /*
  * Affiche la liste des réservations
  */
 Route::get('/bookinglist', 'BookingController@listBook')->name('bookingList.all');
-
 
 /*
  * Affiche la liste des places
  */
 Route::get('/placelist', 'PlaceController@listPlace')->name('placeList.all');
+});

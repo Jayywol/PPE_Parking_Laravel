@@ -102,21 +102,27 @@
                             @endif
                         @else
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('placeList.all') }}">{{ __('Liste des places') }}</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('bookingList.all') }}">{{ __('Liste des réservations') }}</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('home') }}">{{ __('Demande de réservation') }}</a>
-                        </li>
+                        @if (Auth::user()->Admin())
+                          <li class="nav-item">
+                              <a class="nav-link" href="{{ route('placeList.all') }}">{{ __('Liste des places') }}</a>
+                            </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="{{ route('bookingList.all') }}">{{ __('Liste des réservations') }}</a>
+                          </li>
+                        @else
+                          <li class="nav-item">
+                              <a class="nav-link" href="{{ route('booking') }}">{{ __('Demande de réservation') }}</a>
+                          </li>
+                        @endif
 
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->firstName }} <span class="caret"></span>
+                                    {{ Auth::user()->firstName }}
+                                    @if ( Auth::user()->Admin() )
+                                    (Admin)
+                                    @else
+                                    (Membre)
+                                    @endif <span class="caret"></span>
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
