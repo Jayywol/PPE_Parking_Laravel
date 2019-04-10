@@ -15,6 +15,7 @@ class CreatePlacesTable extends Migration
     {
         Schema::create('places', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('lib');
             $table->boolean('available')->default(TRUE);
             $table->timestamps();
         });
